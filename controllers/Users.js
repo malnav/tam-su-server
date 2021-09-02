@@ -17,7 +17,6 @@ exports.signUp = async (req, res, next) => {
         if (emailFound) {
             return res.status(400).json("Email is exist, create another email")
         }
-        
         const hashPassword = await bcrypt.hash(password, 12)
         let newUser = await User.create({
             firstName,

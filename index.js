@@ -4,6 +4,9 @@ const cors = require('cors')
 const memoriesRoutes = require('./routes/memories');
 const usersRoutes = require('./routes/users');
 const app = express();
+const bcrypt = require('bcrypt')
+
+module.exports.bcrypt = bcrypt
 
 const URI = 'mongodb+srv://malnav:malnav@malnav.dg4da.mongodb.net/mernMemories?retryWrites=true&w=majority';
 
