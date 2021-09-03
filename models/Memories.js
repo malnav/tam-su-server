@@ -5,7 +5,10 @@ const MemorySchema = new mongoose.Schema({
     message: String,
     creator: String,
     tags: [String],
-    selectedFile: String,
+    selectedFile:{
+        type: String,
+        default: 'https://picsum.photos/800/600'
+    },
     whoLiked:{
         type: [String],
         default:[]
